@@ -4,8 +4,9 @@ using ScreenSound.Modelos;
 
 try
 {
-    var connection = new Connection();
-    var listaArtista = connection.Listar();
+    var artistaDAL = new ArtistaDAL();
+    artistaDAL.Adicionar(new Artista("50 Cent", "Curtis James Jackson III, mais conhecido pelo seu nome artístico 50 Cent, é um rapper, ator, diretor, roteirista e empresário norte-americano. Ficou conhecido com o lançamento dos álbuns Get Rich or Die Tryin' e The Massacre."));
+    var listaArtista = artistaDAL.Listar();
     
     foreach ( var artista in listaArtista)
     {
